@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webhook Nuker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Particle Background -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- Main Container -->
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <h1 class="title glitch-text">Webhook Nuker</h1>
+      <button id="themeToggle" class="theme-btn">Toggle Theme</button>
+    </div>
+
+    <!-- Upload File Section -->
+    <div class="upload-section">
+      <p>Drag & Drop your webhook file here or</p>
+      <input type="file" id="fileInput" />
+      <button id="loadFileButton" class="btn">Upload Webhooks</button>
+    </div>
+
+    <!-- Add Webhook Section -->
+    <div class="add-webhook">
+      <textarea id="webhookInput" placeholder="Enter webhook URLs (one per line)"></textarea>
+      <button id="addWebhookButton" class="btn">Add Webhooks</button>
+    </div>
+
+    <!-- Message Section -->
+    <div class="message-section">
+      <textarea id="messageInput" placeholder="Enter your message"></textarea>
+      <button id="sendButton" class="btn">Send to Webhooks</button>
+    </div>
+
+    <!-- Webhook List Section -->
+    <div class="dropdown-section">
+      <h2>Webhooks List</h2>
+      <div class="webhook-panel">
+        <select id="webhookDropdown" size="5" multiple></select>
+        <button id="removeSelectedButton" class="btn">Remove Selected</button>
+        <button id="deleteWebhookButton" class="btn delete-btn">Delete Webhook</button>
+      </div>
+    </div>
+
+    <!-- Real-Time Analytics -->
+    <div class="analytics">
+      <p>Active Webhooks: <span id="activeWebhooksCount">0</span></p>
+      <p>Messages Sent: <span id="messagesSentCount">0</span></p>
+      <p>Errors: <span id="errorCount">0</span></p>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toastContainer"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
